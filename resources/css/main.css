@@ -215,3 +215,19 @@
 .cart-layout .section-steps .checkout-steplist .checkout-step.is-active:not(:first-child):after {
     border-top: 1px solid #E30019;
 }
+
+/* step 1 */
+.item-img {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #ECECEC;
+}
+
+.remove {
+    color: #6D6E72;
+    padding-top: 5px;
+    text-align: center;
+}

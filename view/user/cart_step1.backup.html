@@ -215,9 +215,108 @@
           </div>
       </div>
       </header>
+      <div class="sub-header">
+        <div class="container-fluid">
+          <div class="d-lg-none d-xl-none">
+            <ul class="list-submenu list-submenu--mobile">
+              <li class="item-submenu sm-1">
+                <a href="#">
+                  <span class="text">Laptop</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-2">
+                <a href="#">
+                  <span class="text">Laptop Gaming</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-3">
+                <a href="#">
+                  <span class="text">PC GVN</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-4">
+                <a href="#">
+                  <span class="text">Main, CPU, VGA</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-5">
+                <a href="#">
+                  <span class="text">Case, Nguồn, Tản</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-6">
+                <a href="#">
+                  <span class="text">Ổ cứng, RAM, Thẻ nhớ</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-7">
+                <a href="#">
+                  <span class="text">Loa, Micro, Webcam</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-8">
+                <a href="#">
+                  <span class="text">Màn hình</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-9">
+                <a href="#">
+                  <span class="text">Bàn phím</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-10">
+                <a href="#">
+                  <span class="text">Chuột + Lót chuột</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-11">
+                <a href="#">
+                  <span class="text">Tai Nghe</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-12">
+                <a href="#">
+                  <span class="text">Ghế - Bàn</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-13">
+                <a href="#">
+                  <span class="text">Phần mềm, mạng</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-14">
+                <a href="#">
+                  <span class="text">Handheld, Console</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-15">
+                <a href="#">
+                  <span class="text">Phụ kiện (Hub, sạc, cáp..)</span>
+                </a>
+              </li>
+              <li class="item-submenu sm-16">
+                <a href="#">
+                  <span class="text">Dịch vụ và thông tin khác</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="cart-layout">
-          <div class="container-fluid bg-white my-4">
+          <div class="content-header">
+            <div class="container-fluid">
+                <div class="row pt-3">
+                    <div class="col-sm-6">
+                        <span class="page-title m-0 font-14">
+                            <a class="text-primary" href="/dashboard"><i class="fa-solid fa-chevron-left"></i>Mua thêm sản phẩm khác</a>
+                        </span>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+          </div>
+          <div class="container-fluid bg-white mt-2 mb-4">
             <div class="cart-main">
               <section class="section-steps">
                 <div class="checkout-steplist status">
@@ -227,7 +326,7 @@
                     </div>
                     <div class="text"><span>Giỏ hàng</span></div>
                   </div>
-                  <div class="checkout-step status-two is-active" data-box="cart-info-order-box">
+                  <div class="checkout-step status-two" data-box="cart-info-order-box">
                     <div class="icon">
                       <i class="fa-solid fa-id-card"></i>
                     </div>
@@ -248,65 +347,132 @@
                 </div>
               </section>
             </div>
-            <div class="cart-infos">
-              <div class="info-form">
-                <div class="form-input-info p-3">
-                  <h6>Thông tin khách mua hàng</h6>
-                  <form id="form-info-order" class="" action="" method="post">
-                    <div class="row form-group align-items-center mb-2">
-                      <div class="col-12">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input gender-radio" type="radio"
-                                name="gender" id="gender_male" value="m" checked>
-                          <label class="form-check-label" for="gender_male">Anh</label>
+            <div class="section-order">
+              <div class="cart-order">
+                <div class="list-cart-product p-3">
+                  <form id="form-cart-order" class="" action="" method="post">
+                    <div class="list-item">
+                      <div class="col-12 mb-3">
+                        <div class="row">
+                          <div class="left col-3">
+                              <div class="item-img">
+                                <img src="../../resources/images/20241230205000.png" alt="">
+                              </div>
+                              <div class="item-remove">
+                                <div class="remove">
+                                  <a href="#" class="item-1">
+                                    <i class="fa-solid fa-trash-can text-secondary me-1"></i>
+                                    <span class="text-secondary">Xoá</span>
+                                  </a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="right col-9">
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-8">
+                                  <span>Laptop Lenovo V14 G4 IRU 83A000BHVN</span>
+                                </div>
+                                <div class="item-quantity col-4">
+                                  <div class="col-12">
+                                    <div class="row align-items-center">
+                                      <div class="col-3 px-0 border rounded-start">
+                                        <button type="button" class="btn btn-light w-100">-</button>
+                                      </div>
+                                      <div class="col-6 px-0">
+                                        <input class="form-control form-control-sm" type="text" value="1" readonly>
+                                      </div>
+                                      <div class="col-3 px-0 border rounded-end">
+                                        <button type="button" class="btn btn-light w-100">+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input gender-radio" type="radio"
-                                name="gender" id="gender_female" value="f">
-                          <label class="form-check-label" for="gender_female">Chị</label>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <div class="row">
+                          <div class="left col-3">
+                              <div class="item-img">
+                                <img src="../../resources/images/20241230205000.png" alt="">
+                              </div>
+                              <div class="item-remove">
+                                <div class="remove">
+                                  <a href="#" class="item-1">
+                                    <i class="fa-solid fa-trash-can text-secondary me-1"></i>
+                                    <span class="text-secondary">Xoá</span>
+                                  </a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="right col-9">
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-8">
+                                  <span>Laptop Lenovo V14 G4 IRU 83A000BHVN</span>
+                                </div>
+                                <div class="item-quantity col-4">
+                                  <div class="col-12">
+                                    <div class="row align-items-center">
+                                      <div class="col-3 px-0 border rounded-start">
+                                        <button type="button" class="btn btn-light w-100">-</button>
+                                      </div>
+                                      <div class="col-6 px-0">
+                                        <input class="form-control form-control-sm" type="text" value="1" readonly>
+                                      </div>
+                                      <div class="col-3 px-0 border rounded-end">
+                                        <button type="button" class="btn btn-light w-100">+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="row form-group align-items-center mb-2">
-                      <label class="col-11 col-lg-4 col-form-label" for="full_name">Nhập họ tên</label>
-                      <div class="col-12 col-lg-8">
-                        <input type="text" class="form-control form-control-sm" id="full_name" name="full_name" value="" />
-                      </div>
-                    </div>
-                    <div class="row form-group align-items-center mb-2">
-                      <label class="col-11 col-lg-4 col-form-label" for="phone_number">Nhập số điện thoại</label>
-                      <div class="col-12 col-lg-8">
-                        <input type="text" class="form-control form-control-sm" id="phone_number" name="phone_number" value="" />
-                      </div>
-                    </div>
-                    <h6>Chọn cách nhận hàng</h6>
-                    <div class="row form-group align-items-center mb-2">
-                      <div class="col-12">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio"
-                                name="location_choice" id="location_choice" value="1" checked>
-                          <label class="form-check-label" for="location_choice">Giao hàng tận nơi</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row form-group align-items-center mb-2">
-                      <label class="col-11 col-form-label" for="address">Địa chỉ nhận hàng</label>
-                      <div class="col-12">
-                        <input type="text" class="form-control form-control-sm" id="address" name="address" value="" />
-                      </div>
-                    </div>
-                    <div class="row form-group align-items-center mb-2">
-                      <label class="col-11 col-form-label" for="note">Lưu ý khác (Nếu có)</label>
-                      <div class="col-12">
-                        <input type="text" class="form-control form-control-sm" id="note" name="note" value="" />
-                      </div>
-                    </div>
-                    <div class="row form-group align-items-center mb-2">
-                      <div class="col-12">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox"
-                                name="export_receipt" id="export_receipt" value="1">
-                          <label class="form-check-label" for="export_receipt">Xuất hoá đơn cho đơn hàng</label>
+                      <div class="col-12 mb-3">
+                        <div class="row">
+                          <div class="left col-3">
+                              <div class="item-img">
+                                <img src="../../resources/images/20241230205000.png" alt="">
+                              </div>
+                              <div class="item-remove">
+                                <div class="remove">
+                                  <a href="#" class="item-1">
+                                    <i class="fa-solid fa-trash-can text-secondary me-1"></i>
+                                    <span class="text-secondary">Xoá</span>
+                                  </a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="right col-9">
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-8">
+                                  <span>Laptop Lenovo V14 G4 IRU 83A000BHVN</span>
+                                </div>
+                                <div class="item-quantity col-4">
+                                  <div class="col-12">
+                                    <div class="row align-items-center">
+                                      <div class="col-3 px-0 border rounded-start">
+                                        <button type="button" class="btn btn-light w-100">-</button>
+                                      </div>
+                                      <div class="col-6 px-0">
+                                        <input class="form-control form-control-sm" type="text" value="1" readonly>
+                                      </div>
+                                      <div class="col-3 px-0 border rounded-end">
+                                        <button type="button" class="btn btn-light w-100">+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -491,7 +657,7 @@
                   </div>
                   <div class="logo-footer">
                     <a rel="nofollow" target="_blank" href="#">
-                      <img src="//theme.hstatic.net/200000722513/1001090675/14/logo-bct.png?v=7047"
+                      <img src="../../resources/images/dashboard/logo-bct.png"
                           data-src="//theme.hstatic.net/200000722513/1001090675/14/logo-bct.png?v=7047"
                           class=" lazyloaded" alt="Bộ Công Thương">
                     </a>
@@ -499,8 +665,7 @@
                 </div>
               </div>
               <p class="d-none">Copyright © 2024 <a href="#"><strong>Công ty TNHH Thương Mại
-                Gearvn</strong></a>. <a href="#"
-                                        rel="nofollow">Powered by Haravan Enterprise</a></p>
+                Gearvn</strong></a>. <a href="#" rel="nofollow">Powered by Haravan Enterprise</a></p>
             </div>
           </div>
         </div>
