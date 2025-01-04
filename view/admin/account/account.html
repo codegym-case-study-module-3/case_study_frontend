@@ -89,10 +89,8 @@ aria-describedby="btnNavbarSearch" />
                     <li class="breadcrumb-item"><a href="../dashboard/dashboard.html">TRANG CHỦ</a></li>
                     <li class="breadcrumb-item active">ACCOUNT</li>
                 </ol>
-                
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#createUserModal">
-                Tạo mới Account
-            </button>
+
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Tạo mới Account</button>
             <hr/>
 
                 <div class="card mb-4">
@@ -118,10 +116,10 @@ aria-describedby="btnNavbarSearch" />
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>
-
                                     <button type="button" class="btn btn-secondary">Sửa</button>
                                     <button type="button" class="btn btn-secondary">Xóa</button>
                                     <button type="button" class="btn btn-secondary">Update</button>
+                                    <button type="button" class="btn btn-secondary">Chi tiết</button>
 
                                 </td>
 
@@ -135,6 +133,7 @@ aria-describedby="btnNavbarSearch" />
                                         <button type="button" class="btn btn-secondary">Sửa</button>
                                         <button type="button" class="btn btn-secondary">Xóa</button>
                                         <button type="button" class="btn btn-secondary">Update</button>
+                                         <button type="button" class="btn btn-secondary">Chi tiết</button>
                                 </td>
 
                             </tr>
@@ -147,6 +146,8 @@ aria-describedby="btnNavbarSearch" />
                                     <button type="button" class="btn btn-secondary">Sửa</button>
                                     <button type="button" class="btn btn-secondary">Xóa</button>
                                     <button type="button" class="btn btn-secondary">Update</button>
+                                    <button type="button" class="btn btn-secondary">Chi tiết</button>
+
 
                                 </td>
 
@@ -421,63 +422,53 @@ aria-describedby="btnNavbarSearch" />
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="createUserModalLabel">Tạo mới Account</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="createUserForm" action="/your-server-endpoint" method="POST">
-
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" required>
-                                </div>
+        
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">THÔNG TIN:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
             
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Mật khẩu</label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
-                                </div>
-        
-                                <div class="mb-3">
-                                    <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
-                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-                                </div>
-        
-                                <div class="mb-3">
-                                    <label for="role" class="form-label">Role</label>
-                                    <select class="form-select" id="role" name="role" required>
-                                        <option value="user">Admin</option>
-
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Tạo mới</button>
-                            </form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
-                    </div>
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="role" class="form-label">Role</label>
+                            <select class="form-select" id="role" name="role" required>
+                                <option value="user">Admin</option>
+
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Tạo mới</button>
+                </div>
                 </div>
             </div>
-
-            <!-- Toast thông báo thành công -->
-            <div class="toast-container position-fixed top-0 end-0 p-3">
-                <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                        <strong class="me-auto">Thông báo</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-                        Tạo mới account thành công!
-                    </div>
-                </div>
             </div>
-
         </main>
         <!-- <jsp:include page="../layout/footer.jsp" /> -->
          
