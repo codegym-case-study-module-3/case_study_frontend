@@ -135,29 +135,20 @@
                 <div class="container">
                     <div method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Tên: </label>
+                            <label for="name" class="form-label">Tên sản phẩm </label>
                             <input type="text" class="form-control" id="name" name="name">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Thông tin chi tiết:</label>
-                            <div class="div-info">
-                                <!-- Các trường thông tin chi tiết -->
-                                <div class="info" id="info-1">
 
-                                </div>
-                            </div>
-                            <button id="btn-add-info" type="button" class="btn btn-primary mt-2">Thêm thông tin</button>
-                        </div>
                         <div class="mb-3">
-                            <label for="price" class="form-label"> price</label>
+                            <label for="price" class="form-label"> Giá sản phẩm</label>
                             <input type="number" class="form-control" id="price" name="price">
                         </div>
                         <div class="mb-3">
-                            <label for="stock" class="form-label">stock </label>
+                            <label for="stock" class="form-label">Số lượng </label>
                             <input type="text" class="form-control" id="stock" name="stock">
                         </div>
                         <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
+                            <label for="image" class="form-label">Hình ảnh</label>
                             <input type="file" class="form-control" id="image" name="image" accept="image/*">
                             <!-- Khu vực hiển thị ảnh sau khi chọn -->
                             <div class="mt-2">
@@ -165,18 +156,40 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="category_id" class="form-label"> category_id</label>
-                            <input type="text" class="form-control" id="category_id" name="category_id">
-                        </div>
-                        <div class="mb-3">
-                            <label for="created_at" class="form-label">created_at </label>
-                            <input type="text" class="form-control" id="created_at" name="created_at">
+                            <label for="category_id" class="form-label">Danh mục sản phẩm</label>
+                            <select class="form-select" id="category_id" name="category_id">
+                                <option value="" selected disabled>Chọn một danh mục</option>
+                                <option value="1">Danh mục 1</option>
+                                <option value="2">Danh mục 2</option>
+                                <option value="3">Danh mục 3</option>
+                                <option value="4">Danh mục 4</option>
+                            </select>
+                            <!-- Khu vực hiển thị danh mục đã chọn -->
+                            <div class="mt-2">
+                                <span id="selectedCategory" class="badge bg-info text-dark" style="display: none;">Bạn đã chọn: </span>
+                            </div>
                         </div>
 
-                        <button type="button" class="btn btn-primary" id="submit-btn">Thêm mới</button>
+                        <div class="mb-3">
+                            <label class="form-label"> Thông số kỹ thuật</label>
+
+                            <div class="div-info">
+                                <button id="btn-add-info" type="button" class="btn btn-primary mt-2">Thêm thông tin</button>
+                                <div class="info" >
+
+                                    <input type="textarea" class="form-control" name="name_info[]"  />
+                                    <input type="textarea" class="form-control" name="text_info[]"  />
+                                    <button type="button" class="btn btn-danger btn-sm btn-delete-info" data-num="${num}">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
-                </div>
+                        <button type="button" class="btn btn-primary" id="submit-btn">Thêm mới sản phẩm </button>
+
+                    </div>
+
+
                 </body>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -220,9 +233,8 @@
             var num = $(".info").length + 1;
             $(".div-info").append(
                 `<div class="info" id="info-${num}">
-                        <input type="text" class="form-control" name="name_info[]" placeholder="Tên thông tin" disabled />
-                        <input type="text" class="form-control" name="text_info[]" placeholder="Chi tiết thông tin" disabled />
-                        <button type="button" class="btn btn-warning btn-sm btn-edit-info" data-num="${num}">Sửa</button>
+                        <input type="textarea" class="form-control" name="name_info[]"  />
+                        <input type="textarea" class="form-control" name="text_info[]"  />
                         <button type="button" class="btn btn-danger btn-sm btn-delete-info" data-num="${num}">Xóa</button>
                     </div>`
             );
@@ -284,6 +296,7 @@
     }, 2000);
 });
 </script>
+
 </body>
 
 </html>
